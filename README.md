@@ -1,4 +1,4 @@
-# shareing
+# sharing
 
 ## Project setup
 ```

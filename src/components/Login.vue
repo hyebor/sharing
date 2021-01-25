@@ -3,7 +3,7 @@
         <div class="login_box">
             <!--头像区域-->
             <div class="avatar_box">
-                <img src="../assets/logo.png" alt="">
+                <img src="../assets/share.jpg" alt="">
             </div>
             <!--登录表单区域-->
             <el-form ref="loginFormRef" :model="loginForm" :rules="loginFormRules" label-width="0px" class="login_form">
@@ -62,7 +62,7 @@
                     if (!valid) return;
                     const {data: res} = await this.$http.post('login', this.loginForm);
                     // console.log(res);
-                    if(res.meta.status != 200) return this.$message.error('登录失败');
+                    if(res.meta.status !== 200) return this.$message.error('登录失败');
                     this.$message.success('登录成功');
                     // 1. 将登录成功的token，保存到客户端的sessionStorage中
                     //   1.1 项目中除了登录之外的其他API接口，必须在登录之后才能访问
